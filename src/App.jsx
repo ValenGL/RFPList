@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { TodoList } from "./components/TodoList";
+import { Us } from "./components/Us";
 
 export function App() {
   const [todos, setTodos] = useState([
@@ -55,6 +56,9 @@ export function App() {
         {" "}
         Te quedan {todos.filter((todo) => !todo.completed).length} tareas por
         terminar
+      </div>
+      <div>
+        <Us></Us>
       </div>
     </Fragment>
   );
